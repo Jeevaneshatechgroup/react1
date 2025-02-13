@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './app.css';
 
-function MyButton() {
+const App = () => {
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    alert('Button clicked!!');
+  };
+
   return (
-    <button onClick={() => alert('Button clicked!')}>
-      Click Me
-    </button>
+    <div className="App">
+      <button
+        className={`interactive-button ${isClicked ? 'clicked' : ''}`}
+        onClick={handleClick}
+      >
+        {isClicked ? 'Clicked!' : 'Click Me'}
+      </button>
+    </div>
   );
-}
+};
 
-export default MyButton;
+export default App;

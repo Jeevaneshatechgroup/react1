@@ -1,9 +1,10 @@
 import React from 'react'
+import './app.css';
 
 const Demo = () => {
   return (
     <div>
-      <h1>HELLO</h1>
+      <h1>Welcome</h1>
     </div>
   )
 }
